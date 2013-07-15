@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+
+% Emulate MS Word
+\usepackage{wordlike}
+
+% One inch margins
+\PassOptionsToPackage{margin=1in}{geometry}
+
+% Remove footnote indentation
+\usepackage[hang,flushmargin]{footmisc} 
+
+% Double spacing
+\usepackage{setspace}
+\setstretch{2}
+
+% Add space between text and footnotes section
+\setlength{\skip\footins}{0.5in}
+
+% Add a space before the footnote mark
+\let\myfootnote\footnote
+\renewcommand{\footnote}[1]{\myfootnote{~#1}}
+
+% Don't justify along the right margin
+\usepackage{ragged2e}
+\RaggedRight
+
+% Format section titles
+\usepackage[uppercase]{titlesec}
+\usepackage[normalem]{ulem}
+\titlespacing\section{0pt}{0pt}{0pt}
+\usepackage{titlesec}
+\titleformat{\section}
+    {\normalfont\bf\center\uppercase}{\uline{\thesection.\ }}{1em}{\uline}
+
+% Format paragraphs
+\parskip 0pt
+\setlength{\parindent}{0.5in}
+
+% Remove section numbers
+\setcounter{secnumdepth}{-2}
+
+% Generate placeholder text
+\usepackage{lipsum}
+
+\begin{document}
+
+\noindent TO: \\
+\noindent FROM: \\
+\noindent DATE: \today\\
+\noindent RE:
+
+\lipsum[1]
+
+\section{Section Heading}
+
+\lipsum[2-3]
+
+\end{document}
