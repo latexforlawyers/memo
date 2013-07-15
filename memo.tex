@@ -26,11 +26,10 @@
 
 % Format section titles
 \usepackage[uppercase]{titlesec}
-\usepackage[normalem]{ulem}
-\titlespacing\section{0pt}{0pt}{0pt}
+\titlespacing\section{0pt}{0pt}{7pt}
 \usepackage{titlesec}
 \titleformat{\section}
-    {\normalfont\bf\center\uppercase}{\uline{\thesection.\ }}{1em}{\uline}
+    {\normalfont\bf\center\uppercase}{\underline{\thesection.\ }}{1em}{\underline}
 
 % Format paragraphs
 \parskip 0pt
@@ -54,5 +53,9 @@
 \section{Section Heading}
 
 \lipsum[2-3]
+
+\section{Another Section Heading}
+
+\lipsum[4]
 
 \end{document}
